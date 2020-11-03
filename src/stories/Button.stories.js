@@ -1,7 +1,7 @@
 import MyButton from '../components/Button.vue';
 
 export default {
-  title: 'Example/Button',
+  title: 'Component/Button',
   component: MyButton,
   argTypes: {
     size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },

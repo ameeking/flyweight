@@ -11,16 +11,11 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Chip },
-  template: '<chip @onClick="onClick" v-bind="$props">{{ label }}</chip>',
+  template: '<chip>{{ label }}</chip>',
 });
 
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
-  label: 'Chip',
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
   label: 'Chip',
 };

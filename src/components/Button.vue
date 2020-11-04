@@ -1,21 +1,37 @@
 <template>
-  <button type="button" :class="computedClass" @click="onClick">
+  <component :is="type" :href="href" :class="computedClass" @click="onClick">
     <slot></slot>
-  </button>
+  </component>
 </template>
 
 <script>
 export default {
   name: 'Button',
-  props: [
-    'size'
-  ],
+  props: {
+    href: {
+      type: String,
+      required: false,
+      default: null
+    },
+    size: {
+      type: String,
+      required: false,
+      default: 'small'
+    }
+  },
   methods: {
     onClick() {
       this.$emit('onClick');
     }
   },
   computed: {
+    type() {
+      if (this.href) {
+        return 'a';
+      }
+
+      return 'button';
+    },
     computedClass() {
       if (!this.size) {
         return `button`;

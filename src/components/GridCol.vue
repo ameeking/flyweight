@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "GridCol"
+};
+</script>
+
 <style>
 .grid-col {
   display: flex;

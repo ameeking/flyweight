@@ -16,7 +16,13 @@
 <script>
 export default {
   name: "Card",
-  props: ['image']
+  props: {
+    image: {
+      type: String,
+      required: false,
+      default: null
+    }
+  }
 };
 </script>
 

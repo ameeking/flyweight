@@ -1,8 +1,36 @@
 <template>
-  <a class="chip">
+  <component :is="type" class="chip" :href="href">
     <slot></slot>
-  </a>
+    <button @click="onClose">x</button>
+  </component>
 </template>
+
+<script>
+export default {
+  name: "Chip",
+  props: {
+    href: {
+      type: String,
+      required: false,
+      default: null
+    },
+  },
+  methods: {
+    onClose() {
+      this.$emit('onClose');
+    }
+  },
+  computed: {
+    type() {
+      if (this.href) {
+        return 'a';
+      }
+
+      return 'span';
+    }
+  }
+};
+</script>
 
 <style>
 .chip {

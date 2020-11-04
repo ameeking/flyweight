@@ -32,7 +32,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .chip {
   font-size: 0.75rem;
   border: 1px solid gray;

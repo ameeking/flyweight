@@ -10,7 +10,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

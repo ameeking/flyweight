@@ -43,7 +43,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .button--small {
   padding: 1px;
 }

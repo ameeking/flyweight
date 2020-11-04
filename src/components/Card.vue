@@ -26,7 +26,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .card {
   display: flex;
   flex-direction: column;

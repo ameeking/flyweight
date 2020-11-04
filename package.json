@@ -1,6 +1,8 @@
 {
   "name": "flyweight",
   "version": "0.1.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:ameeking/flyweight.git",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

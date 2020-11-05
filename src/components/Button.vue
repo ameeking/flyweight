@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" :href="href" :class="computedClass" @click="onClick">
+  <component :is="element" :href="href" :class="computedClass" @click="onClick">
     <slot></slot>
   </component>
 </template>
@@ -13,10 +13,13 @@ export default {
       required: false,
       default: null
     },
-    size: {
+    type: {
       type: String,
       required: false,
-      default: 'small'
+      default: null,
+      validator: function (value) {
+        return ['primary', 'secondary'].indexOf(value) !== -1
+      }
     }
   },
   methods: {
@@ -25,7 +28,7 @@ export default {
     }
   },
   computed: {
-    type() {
+    element() {
       if (this.href) {
         return 'a';
       }
@@ -33,26 +36,30 @@ export default {
       return 'button';
     },
     computedClass() {
-      if (!this.size) {
+      if (!this.type) {
         return `button`;
       } 
 
-      return `button button--${this.size}`
+      return `button button--${this.type}`
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.button--small {
+@import "../scss/variables.scss";
+
+.button {
   padding: 1px;
 }
 
-.button--medium {
-  padding: 5px;
+.button--primary {
+  border-color: $clr-primary;
+  background-color: $clr-primary-lt;
 }
 
-.button--large {
-  padding: 10px;
+.button--secondary {
+  border-color: $clr-secondary;
+  background-color: $clr-secondary-lt;
 }
 </style>

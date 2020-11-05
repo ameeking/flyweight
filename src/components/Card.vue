@@ -27,6 +27,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../scss/variables.scss";
+
 .card {
   display: flex;
   flex-direction: column;
@@ -48,7 +50,7 @@ export default {
 
 .card__header {
   font-size: 1.25rem;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: $ff-strong;
   margin-bottom: 0.5rem;
 }
 

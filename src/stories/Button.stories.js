@@ -4,7 +4,7 @@ export default {
   title: 'Component/Button',
   component: MyButton,
   argTypes: {
-    size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
+    type: { control: { type: 'select', options: [null, 'primary', 'secondary'] } },
   },
 };
 

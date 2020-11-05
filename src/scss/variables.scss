@@ -1,0 +1,29 @@
+/* our base color, with one tint, and one shade - body and typogaphry is generally the base colour */
+$clr-base:    #333;
+$clr-base-lt: lighten($clr-base, 5%);
+$clr-base-dk: darken($clr-base, 5%);
+
+/* primary brand color - skyblue - with shades and tints via Sass functions */
+$clr-primary:     skyblue;
+$clr-primary-lt:  lighten($clr-primary, 5%);
+$clr-primary-ltr: lighten($clr-primary, 10%);
+$clr-primary-dk:  darken($clr-primary, 5%);
+$clr-primary-dkr: darken($clr-primary, 10%);
+
+/* secondary brand color - hotpink - with shades and tints via Sass functions */
+$clr-secondary:     hotpink;
+$clr-secondary-lt:  lighten($clr-secondary, 5%);
+$clr-secondary-ltr: lighten($clr-secondary, 10%);
+$clr-secondary-dk:  darken($clr-secondary, 5%);
+$clr-secondary-dkr: darken($clr-secondary, 10%);
+
+/* neutrals */
+$clr-ntrl-min: #fff;
+$clr-ntrl-max: #000;
+
+/* base font size - applied at body / html level */
+$fs-base: 16px;
+
+/* font families - all system fonts */
+$ff-base: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$ff-strong: Georgia, Cambria, "Times New Roman", Times, serif;

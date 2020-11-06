@@ -21,5 +21,5 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: "I'm a button",
+  label: "Secondary button",
 };

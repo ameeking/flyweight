@@ -1,14 +1,11 @@
 <template>
-  <div class="card">
+  <div :class="computedClass">
     <div class="card__image" :style="{'background-image': 'url(' + image + ')'}"></div>
     <div class="card__content">
       <div class="card__header">
         <slot name="header"></slot>
       </div>
       <slot name="content"></slot>
-    </div>
-    <div class="card__footer">
-      <slot name="footer"></slot>
     </div>
   </div>
 </template>
@@ -17,10 +14,34 @@
 export default {
   name: "Card",
   props: {
+    type: {
+      type: String,
+      required: false,
+      default: null,
+      validator: function (value) {
+        return ['left', 'right'].indexOf(value) !== -1
+      }
+    },
     image: {
       type: String,
       required: false,
       default: null
+    }
+  },
+  computed: {
+    element() {
+      if (this.href) {
+        return 'a';
+      }
+
+      return 'button';
+    },
+    computedClass() {
+      if (!this.type) {
+        return `card`;
+      }
+
+      return `card card--horizontal-${this.type}`
     }
   }
 };
@@ -32,31 +53,45 @@ export default {
 .card {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  background-color: $clr-ntrl-min;
+  box-shadow: $shadow;
+}
+
+.card--horizontal-left {
+  flex-direction: row;
+
+  .card__image {
+    flex: 1;
+    height: auto;
+    padding-bottom: 0;
+  }
+}
+
+.card--horizontal-right {
+  flex-direction: row-reverse;
+
+  .card__image {
+    flex: 1;
+    height: auto;
+    padding-bottom: 0;
+  }
 }
 
 .card__image {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 150px;
-  width: 100%;
+  padding-bottom: 50%;
 }
 
 .card__content {
   padding: 1rem;
+  flex: 3;
 }
 
 .card__header {
   font-size: 1.25rem;
   font-family: $ff-strong;
   margin-bottom: 0.5rem;
-}
-
-.card__footer {
-  margin-top: auto;
-  border-top: 1px solid lightgray;
-  padding: 1rem;
 }
 </style>

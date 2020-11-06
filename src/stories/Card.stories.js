@@ -4,22 +4,21 @@ export default {
   title: 'Component/Card',
   component: Card,
   argTypes: {
+    type: { control: { type: 'select', options: [null, 'left', 'right'] } },
     header: { control: { type: 'text' } },
-    content: { control: { type: 'text' } },
-    footer: { control: { type: 'text' } },
+    content: { control: { type: 'text' } }
   },
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Card },
-  template: '<card :image="image"><template slot="header">{{ header }}</template><template slot="content">{{ content }}</template><template slot="footer">{{ footer }}</template></card>',
+  template: '<card :type="type" :image="image"><template slot="header">{{ header }}</template><template slot="content">{{ content }}</template><template slot="footer">{{ footer }}</template></card>',
 });
 
 export const Primary = Template.bind({});
 Primary.args = {
-  image: 'https://media-ameeking.netlify.app/images/1.jpg?nf_resize=fit&w=320',
+  image: 'https://media-ameeking.netlify.app/images/1.jpg?nf_resize=fit&w=640',
   header: 'This is the header',
-  content: 'This is the content',
-  footer: 'This is the footer',
+  content: 'This is the content'
 };

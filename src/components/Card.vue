@@ -55,7 +55,7 @@ export default {
   flex-direction: column;
   background-color: $clr-ntrl-min;
   box-shadow: $shadow;
-  max-width: 300px;
+  width: 100%;
   border-radius: 4px;
   overflow: hidden;
 }

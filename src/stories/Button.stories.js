@@ -14,12 +14,24 @@ const Template = (args, { argTypes }) => ({
   template: '<my-button @onClick="onClick" v-bind="$props">{{ label }}</my-button>',
 });
 
+export const Example = Template.bind({});
+Example.args = {
+  label: "I'm a button",
+};
+
+export const Default = Template.bind({});
+Default.args = {
+  label: "Default button",
+};
+
 export const Primary = Template.bind({});
 Primary.args = {
-  label: "I'm a button",
+  label: "Primary button",
+  type: 'primary',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: "Secondary button",
+  type: 'secondary'
 };

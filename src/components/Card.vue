@@ -1,5 +1,5 @@
 <template>
-  <div :class="computedClass">
+  <div :class="computedClass" href="/">
     <div class="card__image" :style="{'background-image': 'url(' + image + ')'}"></div>
     <div class="card__content">
       <div class="card__header">
@@ -55,6 +55,9 @@ export default {
   flex-direction: column;
   background-color: $clr-ntrl-min;
   box-shadow: $shadow;
+  max-width: 300px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .card--horizontal-left {
@@ -81,7 +84,7 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-bottom: 50%;
+  padding-bottom: percentage(9/16);
 }
 
 .card__content {

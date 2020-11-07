@@ -4,14 +4,14 @@ $clr-base-lt: lighten($clr-base, 5%);
 $clr-base-dk: darken($clr-base, 5%);
 
 /* primary brand color - skyblue - with shades and tints via Sass functions */
-$clr-primary:     skyblue;
+$clr-primary:     #00bcd4;
 $clr-primary-lt:  lighten($clr-primary, 5%);
 $clr-primary-ltr: lighten($clr-primary, 10%);
 $clr-primary-dk:  darken($clr-primary, 5%);
 $clr-primary-dkr: darken($clr-primary, 10%);
 
 /* secondary brand color - hotpink - with shades and tints via Sass functions */
-$clr-secondary:     hotpink;
+$clr-secondary:     #ff5722;
 $clr-secondary-lt:  lighten($clr-secondary, 5%);
 $clr-secondary-ltr: lighten($clr-secondary, 10%);
 $clr-secondary-dk:  darken($clr-secondary, 5%);

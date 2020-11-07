@@ -1,7 +1,6 @@
 <template>
-  <component :is="type" class="chip" :href="href">
+  <component :is="element" :class="computedClass" :href="href">
     <slot></slot>
-    <button @click="onClose">x</button>
   </component>
 </template>
 
@@ -9,35 +8,57 @@
 export default {
   name: "Chip",
   props: {
+    type: {
+      type: String,
+      required: false,
+      default: null,
+      validator: function (value) {
+        return ['primary', 'secondary'].indexOf(value) !== -1
+      }
+    },
     href: {
       type: String,
       required: false,
       default: null
     },
   },
-  methods: {
-    onClose() {
-      this.$emit('onClose');
-    }
-  },
   computed: {
-    type() {
+    element() {
       if (this.href) {
         return 'a';
       }
 
       return 'span';
+    },
+    computedClass() {
+      if (!this.type) {
+        return `chip`;
+      } 
+
+      return `chip chip--${this.type}`
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+@import "../scss/variables.scss";
+
 .chip {
   font-size: 0.75rem;
-  border: 1px solid gray;
-  margin: 0.5rem 0.5rem 0.5rem 0;
+  text-transform: uppercase;
   text-decoration: none;
-  padding: 2px 5px;
+  padding: 0.2rem 0.5rem;
+  background-color: $clr-base-dk;
+  color: $clr-ntrl-min;
+  border-radius: 4px;
+}
+
+.chip--primary {
+  background-color: $clr-primary-dkr;
+}
+
+.chip--secondary {
+  background-color: $clr-secondary-dkr;
 }
 </style>

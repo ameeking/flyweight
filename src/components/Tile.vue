@@ -54,7 +54,7 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: lightgray;
+  background-color: gray;
   background-blend-mode: multiply;
   padding-bottom: percentage(1/1);
   position: relative;

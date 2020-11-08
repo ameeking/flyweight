@@ -53,6 +53,7 @@ export default {
   color: $clr-base-dk;
   border: 1px solid $clr-base-dk;
   border-radius: 4px;
+  margin-right: 0.5rem;
 }
 
 .chip--primary {

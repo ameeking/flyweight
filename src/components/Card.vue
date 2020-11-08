@@ -1,5 +1,5 @@
 <template>
-  <div :class="computedClass" href="/">
+  <div :class="computedClass">
     <div class="card__image" :style="{'background-image': 'url(' + image + ')'}"></div>
     <div class="card__content">
       <div class="card__header">

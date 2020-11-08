@@ -49,16 +49,19 @@ export default {
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.2rem 0.5rem;
-  background-color: $clr-base-dk;
-  color: $clr-ntrl-min;
+  background-color: $clr-ntrl-min;
+  color: $clr-base-dk;
+  border: 1px solid $clr-base-dk;
   border-radius: 4px;
 }
 
 .chip--primary {
-  background-color: $clr-primary-dkr;
+  border-color: $clr-primary-dkr;
+  color: $clr-primary-dkr;
 }
 
 .chip--secondary {
-  background-color: $clr-secondary-dkr;
+  border-color: $clr-secondary-dkr;
+  color: $clr-secondary-dkr;
 }
 </style>

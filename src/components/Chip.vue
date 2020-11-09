@@ -45,10 +45,10 @@ export default {
 @import "../scss/variables.scss";
 
 .chip {
-  font-size: 0.75rem;
+  font-size: 0.5rem;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.2rem 0.5rem;
+  padding: 0.125rem 0.2rem;
   background-color: $clr-ntrl-min;
   color: $clr-base-dk;
   border: 1px solid $clr-base-dk;

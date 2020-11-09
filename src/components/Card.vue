@@ -2,9 +2,6 @@
   <div :class="computedClass">
     <div class="card__image" :style="{'background-image': 'url(' + image + ')'}"></div>
     <div class="card__content">
-      <div class="card__header">
-        <slot name="header"></slot>
-      </div>
       <slot name="content"></slot>
     </div>
   </div>
@@ -54,10 +51,11 @@ export default {
   display: flex;
   flex-direction: column;
   background-color: $clr-ntrl-min;
-  box-shadow: $shadow;
-  width: 100%;
+  // box-shadow: $shadow;
+  // padding: 1rem;
+  // width: 100%;
   border-radius: 4px;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .card--horizontal-left {
@@ -66,7 +64,14 @@ export default {
   .card__image {
     flex: 1;
     height: auto;
+    width: 110px;
+    height: 110px;
     padding-bottom: 0;
+  }
+
+  .card__content {
+    padding: 0;
+    margin-left: 1rem;
   }
 }
 
@@ -76,7 +81,14 @@ export default {
   .card__image {
     flex: 1;
     height: auto;
+    width: 110px;
+    height: 110px;
     padding-bottom: 0;
+  }
+
+  .card__content {
+    padding: 0;
+    margin-right: 1rem;
   }
 }
 
@@ -85,10 +97,12 @@ export default {
   background-position: center;
   background-size: cover;
   padding-bottom: percentage(9/16);
+  border-radius: 4px;
+  box-shadow: $shadow;
 }
 
 .card__content {
-  padding: 1rem;
+  padding: 1rem 0;
   flex: 3;
 }
 

@@ -1,0 +1,22 @@
+@import "../variables.scss";
+
+.u-type--sm {
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
+
+.u-type--base-lt {
+  color: $clr-base-lt;
+}
+
+.u-type--base-dk {
+  color: $clr-base-dk;
+}
+
+.u-type--primary {
+  color: $clr-primary;
+}
+
+.u-type--secondary {
+  color: $clr-secondary;
+}

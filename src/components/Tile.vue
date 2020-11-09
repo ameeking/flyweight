@@ -56,7 +56,7 @@ export default {
   background-size: cover;
   background-color: gray;
   background-blend-mode: multiply;
-  padding-bottom: percentage(1/1);
+  padding-bottom: 150%;
   position: relative;
 }
 

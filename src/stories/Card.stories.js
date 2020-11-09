@@ -5,6 +5,7 @@ export default {
   component: Card,
   argTypes: {
     type: { control: { type: 'select', options: [null, 'left', 'right'] } },
+    href: { control: { type: 'text' } },
     header: { control: { type: 'text' } },
     content: { control: { type: 'text' } }
   },
@@ -13,7 +14,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Card },
-  template: '<card :type="type" :image="image"><template slot="header">{{ header }}</template><template slot="content">{{ content }}</template><template slot="footer">{{ footer }}</template></card>',
+  template: '<card :type="type" :image="image" :href="href"><template slot="header">{{ header }}</template><template slot="content">{{ content }}</template><template slot="footer">{{ footer }}</template></card>',
 });
 
 export const Primary = Template.bind({});

@@ -1,10 +1,10 @@
 <template>
-  <div :class="computedClass">
+  <component :is="element" :class="computedClass" :href="href">
     <div class="card__image" :style="{'background-image': 'url(' + image + ')'}"></div>
     <div class="card__content">
       <slot name="content"></slot>
     </div>
-  </div>
+  </component>
 </template>
 
 <script>
@@ -17,7 +17,12 @@ export default {
       default: null,
       validator: function (value) {
         return ['left', 'right'].indexOf(value) !== -1
-      }
+      },
+    },
+    href: {
+      type: String,
+      required: false,
+      default: null
     },
     image: {
       type: String,
@@ -27,11 +32,12 @@ export default {
   },
   computed: {
     element() {
+      console.log(this.href);
       if (this.href) {
         return 'a';
       }
 
-      return 'button';
+      return 'div';
     },
     computedClass() {
       if (!this.type) {
@@ -51,6 +57,8 @@ export default {
   display: flex;
   flex-direction: column;
   background-color: $clr-ntrl-min;
+  text-decoration: none;
+  color: initial;
   // box-shadow: $shadow;
   // padding: 1rem;
   // width: 100%;

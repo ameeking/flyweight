@@ -93,6 +93,7 @@ export default {
   flex: 1;
   border-radius: 4px;
   box-shadow: $shadow;
+  overflow: hidden;
 }
 
 .card__content {
@@ -130,6 +131,7 @@ export default {
   .card__image {
     border-radius: 0;
     box-shadow: none;
+    overflow: auto;
   }
 
   .card__content {

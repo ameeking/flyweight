@@ -86,6 +86,7 @@ export default {
   text-decoration: none;
   color: initial;
   border-radius: 4px;
+  width: 100%;
 }
 
 .card__image {

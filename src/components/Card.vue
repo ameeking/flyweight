@@ -93,7 +93,6 @@ export default {
   flex: 1;
   border-radius: 4px;
   box-shadow: $shadow;
-  overflow: hidden;
 }
 
 .card__content {

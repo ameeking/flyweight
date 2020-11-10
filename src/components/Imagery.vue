@@ -14,18 +14,20 @@ export default {
     },
     width: {
       type: Number,
-      required: true,
+      required: false,
+      default: null
     },
     height: {
       type: Number,
-      required: true,
+      required: false,
+      default: null
     },
     scale: {
       type: String,
       required: false,
       default: null,
       validator: function (value) {
-        return ['16:9', '1:1', '4:3', '3:2'].indexOf(value) !== -1
+        return ['16:9', '4:3', '3:2', '1:1', '2:3', '3:4', '9:16'].indexOf(value) !== -1
       }
     },
     lazy: {
@@ -79,17 +81,14 @@ export default {
   background-color: $clr-base-lt;
 }
 
-.imagery__image {
-  height: auto;
-  width: 100%;
-}
+// .imagery__image {
+//   height: 100%;
+//   width: 100%;
+//   object-fit: cover;
+// }
 
 .imagery--16-9 {
   padding-bottom: percentage(9/16);
-}
-
-.imagery--1-1 {
-  padding-bottom: percentage(1/1);
 }
 
 .imagery--4-3 {
@@ -100,15 +99,34 @@ export default {
   padding-bottom: percentage(2/3);
 }
 
+.imagery--1-1 {
+  padding-bottom: percentage(1/1);
+}
+
+.imagery--2-3 {
+  padding-bottom: percentage(3/2);
+}
+
+.imagery--3-4 {
+  padding-bottom: percentage(4/3);
+}
+
+.imagery--9-16 {
+  padding-bottom: percentage(16/9);
+}
+
 .imagery--16-9,
-.imagery--1-1,
 .imagery--4-3,
-.imagery--3-2 {
+.imagery--3-2,
+.imagery--1-1,
+.imagery--2-3,
+.imagery--3-4,
+.imagery--9-16  {
   .imagery__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
 </style>

@@ -1,10 +1,10 @@
-import Imagery from '../components/Image.vue';
+import Imagery from '../components/Imagery.vue';
 
 export default {
-  title: 'Component/Image',
+  title: 'Component/Imagery',
   component: Imagery,
   argTypes: {
-    scale: { control: { type: 'select', options: ['16:9', '1:1', '4:3', '3:2'] } },
+    scale: { control: { type: 'select', options: ['16:9', '4:3', '3:2', '1:1', '2:3', '3:4', '9:16'] } },
   },
 };
 

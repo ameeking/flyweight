@@ -1,6 +1,8 @@
 <template>
   <component :is="element" :class="computedClass" :href="href">
-    <div class="card__image" :style="{'background-image': 'url(' + image + ')'}"></div>
+    <div class="card__image">
+      <Imagery :src="image" :scale="scale"></Imagery>
+    </div>
     <div class="card__content">
       <slot name="content"></slot>
     </div>
@@ -8,8 +10,13 @@
 </template>
 
 <script>
+import Imagery from './Imagery';
+
 export default {
   name: "Card",
+  components: {
+    'Imagery': Imagery,
+  },
   props: {
     type: {
       type: String,
@@ -33,11 +40,18 @@ export default {
       type: Boolean,
       required: false,
       default: false
-    }
+    },
+    scale: {
+      type: String,
+      required: false,
+      default: '1:1',
+      validator: function (value) {
+        return ['16:9', '4:3', '3:2', '1:1', '2:3', '3:4', '9:16'].indexOf(value) !== -1
+      }
+    },
   },
   computed: {
     element() {
-      console.log(this.href);
       if (this.href) {
         return 'a';
       }
@@ -50,6 +64,13 @@ export default {
         this.type ? `card--horizontal-${this.type}` : null,
         this.border ? 'card--bordered' : null
       ]
+    },
+    computedImageRatio() {
+      if (!this.scale) {
+        return `imagery`;
+      }
+
+      return `imagery imagery--${this.scale.replace(':', '-')}`
     }
   }
 };
@@ -68,12 +89,13 @@ export default {
 }
 
 .card__image {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding-bottom: percentage(9/16);
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+//   padding-bottom: percentage(9/16);
   border-radius: 4px;
   box-shadow: $shadow;
+  overflow: hidden;
 }
 
 .card__content {
@@ -91,9 +113,10 @@ export default {
   flex-direction: row;
 
   .card__image {
-    width: 110px;
-    height: 110px;
-    padding-bottom: 0;
+    // width: 110px;
+    // height: 110px;
+    // padding-bottom: 0;
+    flex: 1;
   }
 
   .card__content {
@@ -105,9 +128,10 @@ export default {
   flex-direction: row-reverse;
 
   .card__image {
-    width: 110px;
-    height: 110px;
-    padding-bottom: 0;
+    // width: 110px;
+    // height: 110px;
+    // padding-bottom: 0;
+    flex: 1;
   }
 
   .card__content {

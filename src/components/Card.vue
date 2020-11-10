@@ -131,7 +131,7 @@ export default {
   .card__image {
     border-radius: 0;
     box-shadow: none;
-    overflow: auto;
+    overflow: initial;
   }
 
   .card__content {

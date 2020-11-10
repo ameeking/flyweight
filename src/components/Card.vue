@@ -89,10 +89,7 @@ export default {
 }
 
 .card__image {
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: cover;
-//   padding-bottom: percentage(9/16);
+  flex: 1;
   border-radius: 4px;
   box-shadow: $shadow;
   overflow: hidden;
@@ -112,13 +109,6 @@ export default {
 .card--horizontal-left {
   flex-direction: row;
 
-  .card__image {
-    // width: 110px;
-    // height: 110px;
-    // padding-bottom: 0;
-    flex: 1;
-  }
-
   .card__content {
     padding: 0 0 0 1rem;
   }
@@ -126,13 +116,6 @@ export default {
 
 .card--horizontal-right {
   flex-direction: row-reverse;
-
-  .card__image {
-    // width: 110px;
-    // height: 110px;
-    // padding-bottom: 0;
-    flex: 1;
-  }
 
   .card__content {
     padding: 0 1rem 0 0;

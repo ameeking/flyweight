@@ -45,15 +45,15 @@ export default {
 @import "../scss/variables.scss";
 
 .chip {
-  font-size: 0.5rem;
+  font-size: 1rem;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.125rem 0.2rem;
+  padding: 0.25rem 0.4rem;
   background-color: $clr-ntrl-min;
   color: $clr-base-dk;
   border: 1px solid $clr-base-dk;
   border-radius: 4px;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 .chip--primary {

@@ -97,21 +97,21 @@ export default {
 }
 
 .card__content {
-  padding: 1rem 0;
+  padding: 2rem 0;
   flex: 3;
 }
 
 .card__header {
-  font-size: 1.25rem;
+  font-size: 2.5rem;
   font-family: $ff-strong;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .card--horizontal-left {
   flex-direction: row;
 
   .card__content {
-    padding: 0 0 0 1rem;
+    padding: 0 0 0 2rem;
   }
 }
 
@@ -119,13 +119,13 @@ export default {
   flex-direction: row-reverse;
 
   .card__content {
-    padding: 0 1rem 0 0;
+    padding: 0 2rem 0 0;
   }
 }
 
 .card--bordered {
   box-shadow: $shadow;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   overflow: hidden;
 
   .card__image {
@@ -135,8 +135,7 @@ export default {
   }
 
   .card__content {
-    padding: 1rem;
+    padding: 2rem;
   }
 }
-
 </style>

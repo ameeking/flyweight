@@ -14,6 +14,6 @@ export default {
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 4rem;
 }
 </style>

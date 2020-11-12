@@ -65,7 +65,7 @@ export default {
   bottom: 0;
   color: #fff;
   font-family: $ff-strong;
-  font-size: 1.5rem;
-  padding: 1rem;
+  font-size: 3rem;
+  padding: 2rem;
 }
 </style>

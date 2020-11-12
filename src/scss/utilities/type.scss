@@ -1,26 +1,26 @@
 @import "../variables.scss";
 
 .u-type--sm {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 1.5rem !important;
+  line-height: 1.5rem !important;
 }
 
 .u-type--base-lt {
-  color: $clr-base-lt;
+  color: $clr-base-lt !important;
 }
 
 .u-type--base-dk {
-  color: $clr-base-dk;
+  color: $clr-base-dk !important;
 }
 
 .u-type--primary {
-  color: $clr-primary;
+  color: $clr-primary !important;
 }
 
 .u-type--primary-dkr {
-  color: $clr-primary-dkr;
+  color: $clr-primary-dkr !important;
 }
 
 .u-type--secondary {
-  color: $clr-secondary;
+  color: $clr-secondary !important;
 }

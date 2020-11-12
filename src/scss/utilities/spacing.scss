@@ -1,25 +1,25 @@
 @for $i from 0 through 12 {
   .u-mb--#{$i} {
-    margin-bottom: #{$i}rem;
+    margin-bottom: #{$i}rem !important;
   }
 
   .u-mt--#{$i} {
-    margin-top: #{$i}rem;
+    margin-top: #{$i}rem !important;
   }
 
   .u-pb--#{$i} {
-    padding-bottom: #{$i}rem;
+    padding-bottom: #{$i}rem !important;
   }
 
   .u-pt--#{$i} {
-    padding-top: #{$i}rem;
+    padding-top: #{$i}rem !important;
   }
 }
 
 .u-mb--auto {
-  margin-bottom: auto;
+  margin-bottom: auto !important;
 }
 
 .u-mt--auto{
-  margin-top: auto;
+  margin-top: auto !important;
 }

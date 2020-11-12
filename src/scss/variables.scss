@@ -3,6 +3,12 @@ $clr-base:    #333;
 $clr-base-lt: lighten($clr-base, 5%);
 $clr-base-dk: darken($clr-base, 5%);
 
+$clr-gray-ltr: #f4f4f4;
+$clr-gray-lt: #C0C0C0;
+$clr-gray: #808080;
+$clr-gray-dk: #4D4D4D;
+$clr-gray-dkr: #171717;
+
 /* primary brand color - skyblue - with shades and tints via Sass functions */
 $clr-primary:     #00bcd4;
 $clr-primary-lt:  lighten($clr-primary, 5%);

@@ -2,10 +2,16 @@
   .u-mb--#{$i} {
     margin-bottom: #{$i}rem;
   }
-}
 
-@for $i from 0 through 12 {
   .u-mt--#{$i} {
     margin-top: #{$i}rem;
+  }
+
+  .u-pb--#{$i} {
+    padding-bottom: #{$i}rem;
+  }
+
+  .u-pt--#{$i} {
+    padding-top: #{$i}rem;
   }
 }

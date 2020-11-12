@@ -82,7 +82,6 @@ export default {
 .card {
   display: flex;
   flex-direction: column;
-  background-color: $clr-ntrl-min;
   text-decoration: none;
   color: initial;
   border-radius: 4px;
@@ -127,6 +126,7 @@ export default {
   box-shadow: $shadow;
   border-radius: 0.5rem;
   overflow: hidden;
+  background-color: $clr-ntrl-min;
 
   .card__image {
     border-radius: 0;

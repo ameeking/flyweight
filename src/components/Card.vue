@@ -96,6 +96,8 @@ export default {
 }
 
 .card__content {
+  display: flex;
+  flex-direction: column;
   padding: 2rem 0;
   flex: 3;
 }

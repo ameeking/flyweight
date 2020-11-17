@@ -1,14 +1,15 @@
-import Header from '../components/Header.vue';
+import HeaderBar from '../components/HeaderBar.vue';
+import MyButton from '../components/Button.vue';
 
 export default {
-  title: 'Component/Header',
-  component: Header,
+  title: 'Component/HeaderBar',
+  component: HeaderBar,
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { Header },
-  template: '<header :menuItems="items" :inverse="inverse" />',
+  components: { HeaderBar, MyButton },
+  template: '<header-bar :menuItems="items" :inverse="inverse"><template slot="logo">LOGO</template><template slot="utilities"><my-button>Test</my-button></template></header-bar>',
 });
 
 export const Primary = Template.bind({});

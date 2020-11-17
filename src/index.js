@@ -5,3 +5,5 @@ export { default as Grid } from "./components/Grid.vue";
 export { default as GridCol } from "./components/GridCol.vue";
 export { default as Tile } from "./components/Tile.vue";
 export { default as Imagery } from "./components/Imagery.vue";
+export { default as Banner } from "./components/Banner.vue";
+export { default as Navigation } from "./components/Navigation.vue";

@@ -32,7 +32,7 @@ export default {
 
 .banner {
   position: relative;
-  padding-bottom: 25%;
+  padding-bottom: 33.33%;
   overflow: hidden;
   box-shadow: $shadow;
   background-size: cover;

@@ -1,5 +1,5 @@
 <template>
-  <div class="banner" :style="{ backgroundImage: `url('${image}')` }">
+  <div :class="computedClasses" :style="{ backgroundImage: `url('${image}')` }">
     <div class="banner__content">
       <slot></slot>
     </div>
@@ -49,5 +49,10 @@ export default {
 
 .banner--no-image {
   padding-bottom: 0;
+  box-shadow: none;
+
+  .banner__content {
+    position: relative;
+  }
 }
 </style>

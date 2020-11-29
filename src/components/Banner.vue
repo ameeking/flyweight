@@ -1,5 +1,6 @@
 <template>
-  <div :class="computedClasses" :style="{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('${image}')` }">
+  <div :class="computedClasses" :style="{ backgroundImage: `url('${image}')` }">
+    <div class="banner__overlay"></div>
     <div class="banner__content">
       <slot></slot>
     </div>
@@ -39,6 +40,16 @@ export default {
   background-position: center;
 }
 
+.banner__overlay {
+  filter: opacity(0.25);
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .banner__content {
   position: absolute;
   display: flex;
@@ -52,6 +63,10 @@ export default {
 .banner--no-image {
   padding-bottom: 0;
   box-shadow: none;
+
+  .banner__overlay {
+    display: none;
+  }
 
   .banner__content {
     position: relative;

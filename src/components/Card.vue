@@ -1,5 +1,5 @@
 <template>
-  <component :is="element" :class="computedClass" :href="href">
+  <component :is="element" :class="computedClass" :to="href">
     <div class="card__image">
       <Imagery :src="image" :scale="scale"></Imagery>
     </div>
@@ -53,7 +53,7 @@ export default {
   computed: {
     element() {
       if (this.href) {
-        return 'a';
+        return 'router-link';
       }
 
       return 'div';

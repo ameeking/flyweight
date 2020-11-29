@@ -1,8 +1,8 @@
 <template>
   <div :class="computedClass">
-    <a class="header-bar__logo" href="/">
+    <router-link class="header-bar__logo" to="/">
       <slot name="logo"></slot>
-    </a>
+    </router-link>
     <Navigation :items="menuItems" :inverse="inverse"/>
     <div class="header-bar__utilities">
       <slot name="utilities"></slot>

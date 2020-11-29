@@ -1,5 +1,5 @@
 <template>
-  <component :is="element" :class="computedClass" :href="href">
+  <component :is="element" :class="computedClass" :to="href">
     <slot></slot>
   </component>
 </template>
@@ -25,7 +25,7 @@ export default {
   computed: {
     element() {
       if (this.href) {
-        return 'a';
+        return 'router-link';
       }
 
       return 'span';

@@ -2,9 +2,9 @@
   <nav :class="computedClasses">
     <ul class="navigation__items">
       <li class="navigation__item" v-for="item in items" :key="item.id">
-        <a :href="item.path" class="navigation__link">
+        <router-link :to="item.path" class="navigation__link">
           {{ item.name }}
-        </a>
+        </router-link>
       </li>
     </ul>
   </nav>

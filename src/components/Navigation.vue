@@ -61,6 +61,10 @@ export default {
 .navigation--inverse {
   .navigation__link {
     color: $clr-ntrl-min;
+
+    &:hover {
+      border-bottom-color: $clr-ntrl-min;
+    }
   }
 }
 </style>

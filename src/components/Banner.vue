@@ -1,5 +1,5 @@
 <template>
-  <div :class="computedClasses" :style="{ backgroundImage: `url('${image}')` }">
+  <div :class="computedClasses" :style="{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('${image}')` }">
     <div class="banner__content">
       <slot></slot>
     </div>
@@ -41,6 +41,8 @@ export default {
 
 .banner__content {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 0;
   left: 0;
   right: 0;

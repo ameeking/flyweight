@@ -2,7 +2,6 @@
 
 .u-type--sm {
   font-size: 1.5rem !important;
-  line-height: 1.5rem !important;
 }
 
 .u-type--ntrl-min {
@@ -15,6 +14,10 @@
 
 .u-type--base-lt {
   color: $clr-base-lt !important;
+}
+
+.u-type--base {
+  color: $clr-base !important;
 }
 
 .u-type--base-dk {

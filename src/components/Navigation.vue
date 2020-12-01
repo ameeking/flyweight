@@ -50,6 +50,7 @@ export default {
 
 .navigation__link {
   color: $clr-base;
+  font-weight: bold;
   padding-bottom: 0.25rem;
 
   &:hover {

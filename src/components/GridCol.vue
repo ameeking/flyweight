@@ -69,6 +69,7 @@ export default {
 
 .grid-col {
   display: flex;
+  flex-direction: column;
 }
 
 $mediaQueries: (

@@ -30,7 +30,7 @@ export default {
   computed: {
     element() {
       if (this.href) {
-        return 'a';
+        return 'router-link';
       }
 
       return 'button';

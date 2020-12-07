@@ -1,5 +1,5 @@
 <template>
-  <component :is="element" :href="href" :class="computedClass" @click="onClick">
+  <component :is="element" :to="href" :class="computedClass" @click="onClick">
     <slot></slot>
   </component>
 </template>

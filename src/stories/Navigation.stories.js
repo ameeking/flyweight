@@ -11,8 +11,8 @@ const Template = (args, { argTypes }) => ({
   template: '<navigation :items="items" :inverse="inverse" />',
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Example = Template.bind({});
+Example.args = {
   items: [
     {
       'id': 1,
@@ -38,8 +38,13 @@ Primary.args = {
   inverse: false
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
+export const Inverse = Template.bind({});
+
+Inverse.parameters = {
+  backgrounds: { default: 'dark' },
+};
+
+Inverse.args = {
   items: [
     {
       'id': 1,

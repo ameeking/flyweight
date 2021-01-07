@@ -14,8 +14,8 @@ const Template = (args, { argTypes }) => ({
   template: '<imagery v-bind="$props"></imagery>',
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Example = Template.bind({});
+Example.args = {
   src: 'https://media-ameeking.netlify.app/images/1.jpg?nf_resize=fit&w=640',
   width: 640,
   height: 427,

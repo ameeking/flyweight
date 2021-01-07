@@ -14,8 +14,8 @@ const Template = (args, { argTypes }) => ({
   template: '<list :items="items" :type="type" />',
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Example = Template.bind({});
+Example.args = {
   items: [
     {
       'id': 1,

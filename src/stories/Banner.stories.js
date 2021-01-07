@@ -11,7 +11,7 @@ const Template = (args, { argTypes }) => ({
   template: '<banner :image="image">Cool</banner>',
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Example = Template.bind({});
+Example.args = {
   image: 'https://media-ameeking.netlify.app/images/1.jpg?nf_resize=fit&w=640'
 };

@@ -86,6 +86,7 @@ export default {
   color: initial;
   border-radius: 4px;
   width: 100%;
+  max-width: 300px;
 }
 
 .card__image {
@@ -110,6 +111,7 @@ export default {
 
 .card--horizontal-left {
   flex-direction: row;
+  max-width: none;
 
   .card__content {
     padding: 0 0 0 2rem;
@@ -118,6 +120,7 @@ export default {
 
 .card--horizontal-right {
   flex-direction: row-reverse;
+  max-width: none;
 
   .card__content {
     padding: 0 2rem 0 0;

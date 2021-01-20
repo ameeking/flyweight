@@ -40,9 +40,11 @@ Example.args = {
 };
 
 export const Inverse = Template.bind({});
+
 Inverse.parameters = {
   backgrounds: { default: 'dark' },
 };
+
 Inverse.args = {
   items: [
     {

@@ -1,7 +1,7 @@
 <template>
   <component :is="element" :class="computedClass" :to="href">
     <div class="card__image">
-      <Imagery :src="image" :scale="scale"></Imagery>
+      <Imagery :src="image.src" :srcset="image.srcset" :scale="scale"></Imagery>
     </div>
     <div class="card__content">
       <slot name="content"></slot>
@@ -32,9 +32,11 @@ export default {
       default: null
     },
     image: {
-      type: String,
+      type: Object,
       required: false,
-      default: null
+      default: function() {
+        return {};
+      }
     },
     border: {
       type: Boolean,

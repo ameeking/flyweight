@@ -20,7 +20,10 @@ const Template = (args, { argTypes }) => ({
 
 export const Example = Template.bind({});
 Example.args = {
-  image: 'https://media-ameeking.netlify.app/images/1.jpg?nf_resize=fit&w=640',
+  image: {
+    src: 'https://media-ameeking.netlify.app/images/1.jpg?nf_resize=fit&w=640',
+    srcset: 'https://media-ameeking.netlify.app/images/1.jpg?nf_resize=fit&w=640 640w, https://media-ameeking.netlify.app/images/1.jpg?nf_resize=fit&w=1024 1024w'
+  },
   content: 'This is the content',
 };
 

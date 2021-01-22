@@ -1,6 +1,6 @@
 <template>
   <div :class="computedClass">
-    <img class="imagery__image" :src="srcImage" :width="width" :height="height" />
+    <img class="imagery__image" :sizes="size" :src="srcImage" :srcset="computedSrcset" :width="width" :height="height" ref="image"/>
   </div>
 </template>
 
@@ -11,6 +11,10 @@ export default {
     src: {
       type: String,
       required: true,
+    },
+    srcset: {
+      type: String,
+      required: false,
     },
     width: {
       type: Number,
@@ -39,12 +43,16 @@ export default {
   data: function () {
     return {
       observer: null, 
-      load: false 
+      load: false,
+      size: null,
     }
   },
   computed: {
     srcImage() {
       return this.load ? this.src : '';
+    },
+    computedSrcset() {
+      return this.load ? this.srcset : '';
     },
     computedClass() {
       if (!this.scale) {
@@ -55,6 +63,8 @@ export default {
     }
   },
   mounted() {
+    this.size = `${this.$refs.image.clientWidth}px`;
+
     if (this.lazy) {
       this.observer = new IntersectionObserver(entries => {
         const image = entries[0];
@@ -80,12 +90,6 @@ export default {
   overflow: hidden;
   background-color: $clr-base-lt;
 }
-
-// .imagery__image {
-//   height: 100%;
-//   width: 100%;
-//   object-fit: cover;
-// }
 
 .imagery--16-9 {
   padding-bottom: percentage(9/16);

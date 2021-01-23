@@ -37,7 +37,7 @@ export default {
       required: false,
       default: null,
       validator: function (value) {
-        return ['16:9', '4:3', '3:2', '1:1', '2:3', '3:4', '9:16'].indexOf(value) !== -1
+        return ['10:3', '16:9', '4:3', '3:2', '1:1', '2:3', '3:4', '9:16'].indexOf(value) !== -1
       }
     },
     lazy: {
@@ -97,6 +97,10 @@ export default {
   background-color: $clr-base-lt;
 }
 
+.imagery--10-3 {
+  padding-bottom: percentage(3/10);
+}
+
 .imagery--16-9 {
   padding-bottom: percentage(9/16);
 }
@@ -125,6 +129,7 @@ export default {
   padding-bottom: percentage(16/9);
 }
 
+.imagery--10-3,
 .imagery--16-9,
 .imagery--4-3,
 .imagery--3-2,

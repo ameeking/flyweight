@@ -1,6 +1,6 @@
 <template>
   <div :class="computedClass">
-    <img class="imagery__image" :sizes="size" :src="srcImage" :srcset="computedSrcset" :width="width" :height="height" ref="image"/>
+    <img class="imagery__image" :sizes="size" :src="srcImage" :srcset="computedSrcset" :width="width" :height="height" :alt="alt" ref="image"/>
   </div>
 </template>
 
@@ -25,6 +25,10 @@ export default {
       type: Number,
       required: false,
       default: null
+    },
+    alt: {
+      type: String,
+      required: false,
     },
     scale: {
       type: String,

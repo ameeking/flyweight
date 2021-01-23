@@ -1,6 +1,8 @@
 <template>
-  <div :class="computedClass">
-    <img class="imagery__image" :sizes="size" :src="srcImage" :srcset="computedSrcset" :width="width" :height="height" :alt="alt" ref="image"/>
+  <div :class="computedClass" ref="image">
+    <transition name="fade">
+      <img v-show="load" class="imagery__image" :sizes="size" :src="srcImage" :srcset="computedSrcset" :width="width" :height="height" :alt="alt" />
+    </transition>
   </div>
 </template>
 
@@ -136,5 +138,13 @@ export default {
     object-fit: cover;
     position: absolute;
   }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0
 }
 </style>

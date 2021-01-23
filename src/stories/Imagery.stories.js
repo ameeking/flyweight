@@ -11,7 +11,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Imagery },
-  template: '<imagery v-bind="$props"></imagery>',
+  template: '<div><imagery v-bind="$props"></imagery><imagery v-bind="$props"></imagery><imagery v-bind="$props"></imagery><imagery v-bind="$props"></imagery></div>',
 });
 
 export const Example = Template.bind({});

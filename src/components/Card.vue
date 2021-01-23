@@ -1,7 +1,7 @@
 <template>
   <component :is="element" :class="computedClass" :to="href">
     <div class="card__image">
-      <Imagery :src="image.src" :srcset="image.srcset" :scale="scale"></Imagery>
+      <Imagery :src="image.src" :srcset="image.srcset" :alt="image.alt" :scale="scale"></Imagery>
     </div>
     <div class="card__content">
       <slot name="content"></slot>

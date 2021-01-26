@@ -7,6 +7,14 @@
     margin-top: #{$i}rem !important;
   }
 
+  .u-ml--#{$i} {
+    margin-left: #{$i}rem !important;
+  }
+
+  .u-mr--#{$i} {
+    margin-right: #{$i}rem !important;
+  }
+
   .u-pb--#{$i} {
     padding-bottom: #{$i}rem !important;
   }

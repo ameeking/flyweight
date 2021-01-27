@@ -1,5 +1,5 @@
 <template>
-  <component :is="element" :to="href" :class="computedClass" @click="onClick">
+  <component :is="element" :to="href" :class="computedClass" @click="onClick" :aria-pressed="pressed">
     <slot></slot>
   </component>
 </template>
@@ -20,6 +20,11 @@ export default {
       validator: function (value) {
         return ['primary', 'secondary'].indexOf(value) !== -1
       }
+    },
+    pressed: {
+      type: Boolean,
+      required: false,
+      default: null
     }
   },
   methods: {
@@ -41,7 +46,7 @@ export default {
       } 
 
       return `button button--${this.type}`
-    }
+    },
   }
 };
 </script>
@@ -82,6 +87,10 @@ export default {
     color: $clr-base-dk;
     border-color: currentColor;
     background-color: $clr-ntrl-min;
+  }
+
+  &[aria-pressed="true"] {
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
   }
 
   &::-moz-focus-inner {

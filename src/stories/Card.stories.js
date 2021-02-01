@@ -15,7 +15,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Card },
-  template: '<card :type="type" :image="image" :href="href" :border="border" :scale="scale"><template slot="content">{{ content }}</template></card>',
+  template: '<card :type="type" :image="image" :href="href" :border="border" :scale="scale"><template slot="image">{{ imageContent }}</template><template slot="content">{{ content }}</template></card>',
 });
 
 export const Example = Template.bind({});
@@ -25,6 +25,7 @@ Example.args = {
     srcset: 'https://media-ameeking.netlify.app/images/1.jpg?nf_resize=fit&w=640 640w, https://media-ameeking.netlify.app/images/1.jpg?nf_resize=fit&w=1024 1024w'
   },
   content: 'This is the content',
+  imageContent: 'This is the image content',
 };
 
 export const CardTop = Template.bind({});

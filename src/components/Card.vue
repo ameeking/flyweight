@@ -2,6 +2,9 @@
   <component :is="element" :class="computedClass" :to="href">
     <div class="card__image">
       <Imagery :src="image.src" :srcset="image.srcset" :alt="image.alt" :scale="scale"></Imagery>
+      <div class="card__image-content">
+        <slot name="image"></slot>
+      </div>
     </div>
     <div class="card__content">
       <slot name="content"></slot>
@@ -96,6 +99,16 @@ export default {
   border-radius: 4px;
   box-shadow: $shadow;
   overflow: hidden;
+  position: relative;
+}
+
+.card__image-content {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .card__content {

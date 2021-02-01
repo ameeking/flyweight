@@ -4,7 +4,7 @@ export default {
   title: 'Component/Button',
   component: MyButton,
   argTypes: {
-    type: { control: { type: 'select', options: [null, 'primary', 'secondary'] } },
+    type: { control: { type: 'select', options: [null, 'inverse', 'primary', 'secondary'] } },
   },
 };
 
@@ -22,6 +22,12 @@ Example.args = {
 export const Default = Template.bind({});
 Default.args = {
   label: "Default button",
+};
+
+export const Inverse = Template.bind({});
+Inverse.args = {
+  label: "Inverse button",
+  type: 'inverse',
 };
 
 export const Primary = Template.bind({});

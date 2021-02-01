@@ -18,7 +18,7 @@ export default {
       required: false,
       default: null,
       validator: function (value) {
-        return ['primary', 'secondary'].indexOf(value) !== -1
+        return ['inverse', 'primary', 'secondary'].indexOf(value) !== -1
       }
     },
     pressed: {
@@ -99,6 +99,17 @@ export default {
 
   &:focus {
     outline: none;
+  }
+}
+
+.button--inverse {
+  background-color: transparent;
+  border-color: $clr-base-dk;
+  color: $clr-base-dk;
+
+  &:hover {
+    color: $clr-ntrl-min;
+    background-color: $clr-base-dk;
   }
 }
 

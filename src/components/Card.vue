@@ -91,7 +91,7 @@ export default {
   color: initial;
   border-radius: 4px;
   width: 100%;
-  max-width: 300px;
+  max-width: 360px;
 }
 
 .card__image {
